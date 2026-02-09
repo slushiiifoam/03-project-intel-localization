@@ -1,0 +1,194 @@
+/* --- Hero Section Styles --- */
+/* Set a blue background for Intel branding */
+header {
+  /* Use a smooth blue gradient for Intel's theme */
+  background: linear-gradient(135deg, #0068b5 0%, #00aee6 100%);
+  color: #fff; /* White text for contrast */
+  padding: 32px 0 24px 0;
+  text-align: center;
+}
+
+/* Style the Intel logo */
+.intel-logo {
+  width: 120px; /* Resize logo */
+  margin-bottom: 16px;
+}
+
+/* Main heading style */
+header h1 {
+  font-size: 2.2em;
+  margin: 0 0 12px 0;
+}
+
+/* Subheading style */
+header p {
+  font-size: 1.1em;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/*
+  Timeline Section Snap Scrolling Documentation
+
+  The timeline container (.timeline) uses CSS scroll snapping to create a smooth, user-friendly horizontal scrolling experience.
+  - `scroll-snap-type: x mandatory;` enables snap scrolling along the horizontal axis, ensuring that scrolling will always stop at a snap point.
+  - Each timeline card (.timeline-card) is assigned `scroll-snap-align: start;`, which means when scrolling stops, the start edge of the card aligns with the start edge of the scroll container.
+  - This setup allows users to scroll through timeline cards horizontally, with each card snapping neatly into view as the scroll position changes.
+*/
+/* --- Timeline Section Styles --- */
+/* Timeline container uses flex for horizontal scroll on large screens */
+.timeline {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Enable horizontal scroll */
+  gap: 20px; /* Space between cards */
+  padding: 32px 16px;
+  background: #f4f8fb; /* Light background for contrast */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Enable horizontal snap scrolling */
+}
+
+/* Make each card snap to the start of the scroll area */
+.timeline-card {
+  /* ...existing code... */
+  scroll-snap-align: start;
+}
+
+/* Timeline cards */
+.timeline-card {
+  background: #fff;
+  border: 2px solid #0068b5; /* Intel blue border */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  min-width: 320px; /* Increased width for more space */
+  max-width: 360px; /* Increased max width */
+  min-height: 320px; /* Increased height for better space */
+  padding: 28px 20px; /* More padding for content */
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  flex-shrink: 0; /* Prevent shrinking on scroll */
+  cursor: pointer;
+  box-sizing: border-box; /* Ensure padding is included in size */
+  overflow: hidden; /* Ensures overlay stays inside the card */
+  scroll-snap-align: start;
+}
+
+/* Card heading styles */
+.timeline-card h2 {
+  color: #0068b5;
+  margin: 0 0 4px 0;
+  font-size: 1.3em;
+}
+.timeline-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+}
+
+/* Card image style */
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Hide extra details by default, show on hover */
+/* Only show one line of text by default */
+.card-details {
+  max-height: 1.5em; /* Show only one line */
+  overflow: hidden; /* Hide the rest of the text */
+  transition: max-height 0.4s; /* Smooth transition */
+}
+
+/* On hover, expand card and show more details */
+.timeline-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 6px 20px rgba(0,104,181,0.15);
+  z-index: 1;
+}
+.timeline-card:hover .card-details {
+  max-height: 300px; /* Reveal all text smoothly */
+}
+
+/* Overlay for card details - hidden at first, shows on hover */
+.card-overlay {
+  /* The overlay covers the card exactly */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure overlay stretches to the right edge */
+  bottom: 0; /* Ensure overlay stretches to the bottom edge */
+  width: 100%;
+  height: 100%;
+  background: rgba(0,104,181,0.95); /* Intel blue, mostly opaque */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden at first */
+  pointer-events: none; /* Can't interact when hidden */
+  /* Remove border-radius so overlay fully covers the card, including corners */
+  border-radius: 0;
+  transition: opacity 0.3s;
+  padding: 28px 20px; /* Match card padding for overlay */
+  font-size: 1.08em; /* Slightly larger text for readability */
+  line-height: 1.6;  /* More line spacing for the paragraph */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Show the overlay when the card is hovered */
+.timeline-card:hover .card-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Responsive Styles --- */
+/* On small screens, stack timeline vertically */
+@media (max-width: 700px) {
+  .timeline {
+    flex-direction: column;
+    gap: 16px;
+    /* Add more padding to the sides for small screens */
+    padding: 20px 16px;
+  }
+  .timeline-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    min-height: 220px; /* Reduce min-height for small screens */
+    padding: 18px 8px;
+    overflow: hidden; /* Also ensure overlay stays inside on small screens */
+    /* Add margin to give space from the edges */
+    margin: auto;
+  }
+  .card-overlay {
+    padding: 18px 8px;
+    border-radius: 0; /* Also remove border-radius on small screens */
+  }
+  /* Add more padding for header text on small screens */
+  header h1,
+  header p {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* --- General Styles --- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9eef2;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Style the instruction at the bottom */
+body > p:last-child {
+  text-align: center;
+  color: #0068b5;
+  font-weight: bold;
+  margin: 24px 0 32px 0;
+}
