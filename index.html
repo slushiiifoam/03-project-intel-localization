@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  
+  <!-- Bootstrap CSS (RTL version) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,7 +41,7 @@
       <h2>1968</h2>
       <h3>Intel Founded</h3>
       <!-- Use the corresponding image for this card -->
-      <img src="img/1Intel.png" alt="Intel Founded" />
+      <img src="img/1Intel.png" alt="Two engineers in a lab office review and mark up a large “Intel Corporation” document on a desk, with early electronic test equipment and binders visible behind them, suggesting early microprocessor development work." />
       <div class="card-overlay">
         <p>
           Robert Noyce and Gordon Moore rename the newly formed company 
@@ -47,7 +54,7 @@
     <div class="timeline-card">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2Intel.png" alt="First Microprocessor" />
+      <img src="img/2Intel.png" alt="A man stands at a podium holding a small microchip during a press conference, with a banner reading “Intel 4004 Microprocessor: The World’s First” and an audience seated behind him, marking the introduction of the first commercial microprocessor in 1971." />
       <div class="card-overlay">
         <p>
           Intel debuts the 4004, the world's first commercial microprocessor, 
@@ -60,7 +67,7 @@
     <div class="timeline-card">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3Intel.png" alt="8086 Processor" />
+      <img src="img/3Intel.png" alt="A presenter at a podium holds up a large integrated circuit during a press event labeled “Intel 8086: The 16-Bit Revolution,” while journalists and attendees take notes and photographs." />
       <div class="card-overlay">
         <p>
           Launch of the 8086 processor, establishing the x86 architecture 
@@ -72,7 +79,7 @@
     <div class="timeline-card">
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4Intel.png" alt="386 Processor" />
+      <img src="img/4Intel.png" alt="A speaker gestures toward a projected technical diagram while holding a silicon wafer at an event titled “Intel 386: The 32-Bit Revolution,” with rows of attendees using early laptop computers." />
       <div class="card-overlay">
         <p>
           Intel introduces the 386 processor with 32-bit architecture, 
@@ -85,7 +92,7 @@
     <div class="timeline-card">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="img/5Intel.png" alt="Peak GHG Emissions" />
+      <img src="img/5Intel.png" alt="A business presentation slide shows a graph of rising greenhouse gas emissions peaking in 2006, followed by arrows pointing to icons for solar, wind, renewable energy, and industrial efficiency, illustrating a sustainability investment and emissions-reduction strategy." />
       <div class="card-overlay">
         <p>
           This year marks Intel's highest annual greenhouse gas emissions 
@@ -99,7 +106,7 @@
     <div class="timeline-card">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="img/6Intel.png" alt="RISE Strategy" />
+      <img src="img/6Intel.png" alt="A keynote speaker stands on a large stage in front of a screen reading “RISE Strategy & 2030 Goals,” with icons representing climate action, water stewardship, and waste reduction, addressing a large seated audience." />
       <div class="card-overlay">
         <p>
           Intel launches its RISE (Responsible, Inclusive, Sustainable, 
@@ -112,7 +119,7 @@
     <div class="timeline-card">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="img/7Intel.png" alt="Net-Zero By 2040" />
+      <img src="img/7Intel.png" alt="A speaker presents in front of a large display reading “Intel Commits to Net-Zero Greenhouse Gas Emissions (Scope 1 & 2) by 2040,” while journalists and attendees sit facing the stage." />
       <div class="card-overlay">
         <p>
           Intel announces its commitment to achieve net-zero greenhouse 
@@ -125,7 +132,7 @@
     <div class="timeline-card">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="img/8Intel.png" alt="Renewable Electricity" />
+      <img src="img/8Intel.png" alt="A group of employees in safety vests and hard hats stand outdoors holding a banner reading “Powering Our Future Sustainably,” with wind turbines, solar panels, and a building sign stating “99% Renewable Electricity Achieved” in the background." />
       <div class="card-overlay">
         <p>
           The company achieves 99% renewable electricity usage worldwide, 
@@ -138,7 +145,7 @@
     <div class="timeline-card">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="img/9Intel.png" alt="Sustainability Summit" />
+      <img src="img/9Intel.png" alt="A large conference hall with a stage labeled “Intel Sustainability Summit: Collaborating for Sustainable Semiconductor Manufacturing,” showing panelists seated on stage and attendees networking and shaking hands in smaller inset images." />
       <div class="card-overlay">
         <p>
           Intel hosts its first Sustainability Summit, uniting suppliers, 
@@ -148,6 +155,76 @@
       </div>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- 3-Column Content Section (NEW BOOTSTRAP SECTION) -->
+  <section class="features-section">
+    <!-- Bootstrap container: centers content and adds responsive padding -->
+    <div class="container">
+      <!-- Bootstrap row: creates a horizontal layout for columns -->
+      <div class="row">
+        
+        <!-- Column 1: RISE Strategy -->
+        <!-- col-md-4: Each column takes 1/3 width on medium+ screens, stacks on small screens -->
+        <div class="col-md-4 feature-column">
+          <!-- Icon with background circle -->
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h2>RISE Strategy</h2>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <!-- Learn More Button/Link -->
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+
+        <!-- Column 2: Commitment -->
+        <div class="col-md-4 feature-column">
+          <!-- Icon with background circle -->
+          <div class="feature-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h2>Commitment</h2>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This commitment builds on decades of 
+            environmental initiatives and partnerships across the semiconductor 
+            industry.
+          </p>
+          <!-- Learn More Button/Link -->
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+
+        <!-- Column 3: Water & Waste -->
+        <div class="col-md-4 feature-column">
+          <!-- Icon with background circle -->
+          <div class="feature-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h2>Water &amp; Waste</h2>
+          <p>
+            Intel conserves billions of gallons of water annually and 
+            collaborates with local communities to restore watersheds.
+            Intel also upcycles and recycles materials to reduce waste and 
+            advance a circular economy.
+          </p>
+          <!-- Learn More Button/Link -->
+          <a href="#" class="learn-more-link">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription Form -->
+  <section>
+    <h2>Subscribe to our Newsletter</h2>
+    <!-- Add form here -->
+  </section>
+
+  <!-- Bootstrap JavaScript (required for interactive features) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

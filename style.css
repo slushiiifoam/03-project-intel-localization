@@ -192,3 +192,65 @@ body > p:last-child {
   font-weight: bold;
   margin: 24px 0 32px 0;
 }
+
+/* --- 3-Column Features Section --- */
+/* Background color and padding for the new section */
+.features-section {
+  background: #fff;
+  padding: 48px 16px;
+}
+
+/* Style each column container */
+.feature-column {
+  text-align: center; /* Center text within each column */
+  padding: 24px 16px; /* Space inside each column */
+  margin-bottom: 24px; /* Space below on small screens */
+}
+
+/* Icon styling */
+.feature-icon {
+  width: 80px; /* Circle size */
+  height: 80px;
+  background: #0068b5; /* Intel blue background */
+  border-radius: 50%; /* Make it circular */
+  display: flex; /* Center the icon inside */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto; /* Center the circle and add space below */
+  font-size: 2em; /* Icon size */
+  color: #fff; /* White icon color */
+}
+
+/* Column heading style */
+.feature-column h2 {
+  color: #0068b5; /* Intel blue */
+  font-size: 1.4em;
+  margin: 16px 0 12px 0;
+}
+
+/* Column paragraph style */
+.feature-column p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Learn More link styling */
+.learn-more-link {
+  display: inline-block; /* Makes it behave like a button */
+  color: #0068b5; /* Intel blue */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  padding: 8px 16px; /* Add padding around text */
+  border: 2px solid #0068b5; /* Blue border */
+  border-radius: 6px; /* Rounded corners */
+  transition: all 0.3s; /* Smooth animation */
+}
+
+/* Learn More link hover effect */
+.learn-more-link:hover {
+  background: #0068b5; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
