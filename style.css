@@ -318,7 +318,6 @@ section h2 i {
   background-size: 60% 60%;
   background-position: center;
   background-repeat: no-repeat;
-  /* Add a white border for extra contrast */
   border: 2px solid #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -328,4 +327,32 @@ section h2 i {
 .carousel-control-next {
   width: 7%;
   min-width: 48px;
+}
+
+/* --- Fix carousel controls on small screens --- */
+@media (max-width: 700px) {
+  /* Make controls smaller and move them up so they don't cover content */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 36px;
+    min-width: 36px;
+    top: 10px;
+    bottom: auto;
+    transform: none;
+    height: 36px;
+    opacity: 0.95;
+  }
+  .carousel-control-prev {
+    right: 10px;
+    left: auto;
+  }
+  .carousel-control-next {
+    left: 10px;
+    right: auto;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
